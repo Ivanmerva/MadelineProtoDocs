@@ -18,6 +18,7 @@ redirect_from: /API_docs/methods/payments_getStarsTransactions.html
 |inbound|[Bool](/API_docs/types/Bool.html) | Optional|
 |outbound|[Bool](/API_docs/types/Bool.html) | Optional|
 |ascending|[Bool](/API_docs/types/Bool.html) | Optional|
+|subscription\_id|[string](/API_docs/types/string.html) | Optional|
 |peer|[Username, chat ID, Update, Message or InputPeer](/API_docs/types/InputPeer.html) | Optional|
 |offset|[string](/API_docs/types/string.html) | Optional|
 |limit|[int](/API_docs/types/int.html) | Optional|
@@ -40,6 +41,6 @@ include 'madeline.php';
 $MadelineProto = new \danog\MadelineProto\API('session.madeline');
 $MadelineProto->start();
 
-$payments_StarsStatus = $MadelineProto->payments->getStarsTransactions(inbound: $Bool, outbound: $Bool, ascending: $Bool, peer: $InputPeer, offset: 'string', limit: $int, );
+$payments_StarsStatus = $MadelineProto->payments->getStarsTransactions(inbound: $Bool, outbound: $Bool, ascending: $Bool, subscription_id: 'string', peer: $InputPeer, offset: 'string', limit: $int, );
 ```
 
